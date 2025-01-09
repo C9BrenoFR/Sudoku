@@ -49,6 +49,14 @@ public class Sudoku {
         this.board[--line][--column] = value;
     }
 
+    public void removeVal(int line, int column){
+        if (line < 1 || line > 9)
+            throw new IllegalArgumentException("Linha Inválida - tente valor de 1 a 9");
+        else if (column < 1 || column > 9)
+            throw new IllegalArgumentException("Coluna Inválida - tente valor de 1 a 9");
+        this.board[line][column] = 0;
+    }
+
     public boolean isFull(){
         for (int i = 0; i < 9; i++){
             for (int j = 0; j < 9; j++){
