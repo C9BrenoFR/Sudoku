@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void menu(){
+        Game game;
         Scanner scanner = new Scanner(System.in);
         int input;
 
@@ -22,9 +23,9 @@ public class Main {
             System.out.println("Quantos valores padrão você quer?");
             input = scanner.nextInt();
             scanner.nextLine();
-            Game game = new Game(input);
-        }else if(input == 2){
-            Game game = new Game();
+            game = new Game(input);
+        }else{
+            game = new Game();
             game.play();
         }
 

@@ -104,7 +104,7 @@ public class Game {
         String[] numbers = input.split(",");
 
         try {
-            sudoku.removeVal(Integer.parseInt(numbers[1]),Integer.parseInt(numbers[2]));
+            sudoku.removeVal(Integer.parseInt(numbers[0]),Integer.parseInt(numbers[1]));
         }catch (IllegalArgumentException e){
             System.out.println(e.getMessage());
         }
@@ -116,7 +116,6 @@ public class Game {
         System.out.println("Digite A posição da dica (linha,coluna)");
         String input = scanner.nextLine();
 
-        scanner.close();
 
         input = input.replace("(", "").replace(")", "");
         String[] numbers = input.split(",");
